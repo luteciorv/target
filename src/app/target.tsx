@@ -1,4 +1,5 @@
 import { Button } from '@/components/Button';
+import { CurrencyInput } from '@/components/CurrencyInput';
 import { Input } from '@/components/Input';
 import { PageHeader } from '@/components/PageHeader';
 import { router } from 'expo-router';
@@ -16,7 +17,9 @@ export default function Target() {
           label='Nome da meta'
           placeholder='Ex: Viagem para praia, Apple Watch'
         />
-        <Button title='Voltar' onPress={() => router.back()} />
+
+        <CurrencyInput label='Valor alvo' value={0} />
+        <Button title='Salvar' onPress={() => router.back()} />
       </View>
     </View>
   );
