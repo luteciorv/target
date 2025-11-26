@@ -1,3 +1,4 @@
+import { Loading } from '@/components/Loading';
 import { colors } from '@/theme/colors';
 import {
   Inter_400Regular,
@@ -15,7 +16,7 @@ export default function Layout() {
   });
 
   if (!fontsLoaded) {
-    return;
+    return <Loading />;
   }
 
   return (
