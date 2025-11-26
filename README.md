@@ -1,16 +1,12 @@
-FinanceGoals — Controle de Metas e Finanças
+Target — Controle de Metas e Finanças
 
-O FinanceGoals é um aplicativo desenvolvido em React Native para organização financeira pessoal.
+O Target é um aplicativo desenvolvido em React Native para organização financeira pessoal.
 Ele permite criar metas, registrar transações e acompanhar a evolução de cada objetivo.
 
 ✨ Funcionalidades
-
 Listagem de metas com total de entradas e saídas.
-
 Detalhes da meta, mostrando progresso e histórico de transações.
-
 Cadastro de nova transação (entrada ou saída).
-
 Criação de nova meta com valor desejado.
 
 ## 🖼️ Previews das Telas
@@ -31,12 +27,13 @@ Criação de nova meta com valor desejado.
 
 ![Nova Meta](./images/nova-meta.png)
 
-🚀 Como Rodar
+### 🚀 Como Rodar
+
 npm install
 npx expo start
 ou
 npx expo run:android
 
-📄 Licença
+### 📄 Licença
 
-MIT License.
+Curso de React Native da Rocketseat
