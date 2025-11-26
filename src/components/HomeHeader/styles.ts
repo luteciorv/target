@@ -15,9 +15,15 @@ export const style = StyleSheet.create({
     color: colors.white,
     fontFamily: fontFamily.regular,
   },
-  total:{
+  total: {
     fontSize: 32,
     color: colors.white,
-    fontFamily: fontFamily.medium
-  }
+    fontFamily: fontFamily.medium,
+  },
+  summary: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: 12,
+    justifyContent: 'space-between',
+  },
 });
