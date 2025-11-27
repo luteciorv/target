@@ -15,6 +15,10 @@ export type TargetResponse = {
   updated_at: Date;
 };
 
+export type TargetUpdate = TargetCreate & {
+  id: number;
+};
+
 export function useTargetDatabase() {
   const database = useSQLiteContext();
 
@@ -46,7 +50,7 @@ export function useTargetDatabase() {
     `);
   }
 
-  function show(id: number): Promise<TargetResponse> {
+  async function show(id: number): Promise<TargetResponse> {
     return database.getFirstAsync<TargetResponse>(`
         SELECT 
             T.id,
@@ -62,9 +66,26 @@ export function useTargetDatabase() {
     `);
   }
 
+  async function update(data: TargetUpdate): Promise<void> {
+    const statement = await database.prepareAsync(`
+       UPDATE targets SET
+        name = $name,
+        amount = $amount,
+        updated_at = CURRENT_TIMESTAMP
+       WHERE id = $id 
+    `);
+
+    statement.executeAsync({
+      $id: data.id,
+      $name: data.name,
+      $amount: data.amount,
+    });
+  }
+
   return {
     create,
     listBySavedValue,
     show,
+    update,
   };
 }
