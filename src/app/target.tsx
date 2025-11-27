@@ -2,12 +2,15 @@ import { Button } from '@/components/Button';
 import { CurrencyInput } from '@/components/CurrencyInput';
 import { Input } from '@/components/Input';
 import { PageHeader } from '@/components/PageHeader';
+import { useTargetDatabase } from '@/database/useTargetDatabase';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { Alert, View } from 'react-native';
 
 export default function Target() {
   const params = useLocalSearchParams<{ id?: string }>();
+  const targetDatabase = useTargetDatabase();
+
   const [isProcessing, setIsProcessing] = useState(false);
   const [name, setName] = useState('');
   const [amount, setAmount] = useState(0);
@@ -30,6 +33,8 @@ export default function Target() {
 
   async function create() {
     try {
+      await targetDatabase.create({ name, amount });
+
       Alert.alert('Nova meta', 'Meta criada com sucesso!', [
         {
           text: 'Ok',
