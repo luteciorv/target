@@ -1,15 +1,31 @@
-Target — Controle de Metas e Finanças
+# 🎯 Target — Controle de Metas e Finanças
 
-O Target é um aplicativo desenvolvido em React Native para organização financeira pessoal.
-Ele permite criar metas, registrar transações e acompanhar a evolução de cada objetivo.
+![Project Badge](https://img.shields.io/badge/Target-App-blue)
 
-✨ Funcionalidades
-Listagem de metas com total de entradas e saídas.
-Detalhes da meta, mostrando progresso e histórico de transações.
-Cadastro de nova transação (entrada ou saída).
-Criação de nova meta com valor desejado.
+> Aplicativo mobile para controle de metas financeiras, criado em React Native. Permite criar metas, registrar transações (entrada/saída) e acompanhar o progresso de cada objetivo.
 
-## 🖼️ Previews das Telas
+---
+
+## 📋 Sumário
+
+- [Funcionalidades](#-funcionalidades)
+- [Screenshots](#-screenshots)
+- [Instalação e execução](#-instalação-e-execução)
+
+---
+
+## ✨ Funcionalidades
+
+- 📌 **Listagem de metas** com total de entradas e saídas.
+- 📊 **Detalhes da meta**: histórico de transações e progresso em porcentagem/valor.
+- ➕ **Cadastrar nova transação** (entrada ou saída) associada a uma meta.
+- 📝 **Criar nova meta** com título, descrição e valor objetivo.
+
+---
+
+## 🖼️ Screenshots
+
+> OBS: Verifique se os arquivos de imagem estão em `./images` e com os nomes corretos.
 
 ### 🏠 Tela Inicial
 
@@ -27,13 +43,16 @@ Criação de nova meta com valor desejado.
 
 ![Nova Meta](./images/nova-meta.png)
 
-### 🚀 Como Rodar
+---
+
+## 🚀 Instalação e execução
+
+git clone <seu-repo-url>
+cd <seu-repo>
+Instale as dependências:
 
 npm install
+
 npx expo start
 ou
 npx expo run:android
-
-### 📄 Licença
-
-Curso de React Native da Rocketseat
